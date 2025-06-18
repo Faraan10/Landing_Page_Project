@@ -3,7 +3,6 @@ import React from "react";
 const CarePlanBanner = () => {
   return (
     <div className="w-[90%] md:w-[85%] mt-6 mx-auto bg-purple-200 px-4 py-6 md:px-10 md:py-6 flex flex-col md:flex-row items-center justify-between gap-4 rounded-lg">
-      {/* Left: Image + Text */}
       <div className="flex items-center gap-4">
         <img
           src=""
@@ -25,7 +24,6 @@ const CarePlanBanner = () => {
         </div>
       </div>
 
-      {/* Right: Button */}
       <div>
         <button className="btn bg-purple-800 text-white px-6">Know more</button>
       </div>
