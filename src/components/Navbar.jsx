@@ -53,9 +53,14 @@ const Navbar = () => {
 
       {/* Right Side Icons */}
       <div className="navbar-end flex gap-3 text-xl">
-        <FaSearch className="cursor-pointer" />
-        <FaUser className="cursor-pointer" />
-        <FaShoppingCart className="cursor-pointer" />
+        <FaSearch className="text-2xl cursor-pointer" />
+        <FaUser className="text-2xl cursor-pointer" />
+        <div className="relative">
+          <FaShoppingCart className="text-2xl md:text-3xl cursor-pointer" />
+          <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">
+            0
+          </span>
+        </div>
       </div>
     </div>
   );
