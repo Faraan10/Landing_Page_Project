@@ -1,6 +1,6 @@
 import { FaSearch, FaUser, FaShoppingCart } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
   return (
     <div className="navbar bg-white shadow-md px-6">
       {/* Logo */}
@@ -58,7 +58,7 @@ const Navbar = () => {
         <div className="relative">
           <FaShoppingCart className="text-2xl md:text-3xl cursor-pointer" />
           <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">
-            0
+            {cart.length}
           </span>
         </div>
       </div>
