@@ -43,7 +43,7 @@ const products = [
   },
 ];
 
-const ProductCard = ({ title }) => {
+const ProductCard = ({ title, addToCart }) => {
   return (
     <div className="px-4 py-10 bg-white">
       <h2 className="text-2xl font-bold mb-6 text-left">{title}</h2>
@@ -75,7 +75,10 @@ const ProductCard = ({ title }) => {
                 )}
               </p>
 
-              <button className="btn mt-4 bg-purple-800 text-white btn-sm w-full">
+              <button
+                className="btn mt-4 bg-purple-800 text-white btn-sm w-full"
+                onClick={() => addToCart(product)}
+              >
                 Add to Cart
               </button>
             </div>
