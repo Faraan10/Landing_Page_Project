@@ -9,19 +9,21 @@ import HealthConcerns from "../components/HealthConcerns";
 import InfoSection from "../components/InfoSection";
 import VideoSection from "../components/VideoSection";
 import Footer from "../components/Footer";
+import { useState } from "react";
 
 const Home = () => {
+  const [cart, setCart] = useState([]);
   return (
     <div>
       <TopBar />
       <Navbar />
       <Hero />
       <BrandGrid />
-      <ProductCard title="Features Products" />
+      <ProductCard title="Features Products" cart={cart} />
       <CarePlanBanner />
       <Bestsellers />
       <HealthConcerns />
-      <ProductCard title="Deal of the Day" />
+      <ProductCard title="Deal of the Day" cart={cart} />
       <InfoSection />
       <VideoSection />
       <Footer />
