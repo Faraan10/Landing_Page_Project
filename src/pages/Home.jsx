@@ -10,20 +10,29 @@ import InfoSection from "../components/InfoSection";
 import VideoSection from "../components/VideoSection";
 import Footer from "../components/Footer";
 import { useState } from "react";
+import toast from "react-hot-toast";
 
 const Home = () => {
   const [cart, setCart] = useState([]);
+  console.log(cart);
+
+  const addToCart = (newItem) => {
+    // console.log(newItem);
+
+    setCart((prevItems) => [...prevItems, newItem]);
+    toast.success("Item added to cart!");
+  };
   return (
     <div>
       <TopBar />
-      <Navbar />
+      <Navbar cart={cart} />
       <Hero />
       <BrandGrid />
-      <ProductCard title="Features Products" cart={cart} />
+      <ProductCard title="Features Products" addToCart={addToCart} />
       <CarePlanBanner />
       <Bestsellers />
       <HealthConcerns />
-      <ProductCard title="Deal of the Day" cart={cart} />
+      <ProductCard title="Deal of the Day" addToCart={addToCart} />
       <InfoSection />
       <VideoSection />
       <Footer />
